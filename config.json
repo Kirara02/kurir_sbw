@@ -1,0 +1,15 @@
+{
+  "openai_key": "",
+  "modules": [
+    "splash_screen",
+    "register_screen",
+    "login_screen",
+    "forgot_password_screen",
+    "beranda_screen",
+    "balance_screen",
+    "profil_screen",
+    "help_screen",
+    "income_screen",
+    "order_history_screen"
+  ]
+}
