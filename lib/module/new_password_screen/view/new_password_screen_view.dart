@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
-import 'package:mobile_kurir_sbw/shared/theme/theme_config.dart';
-import 'package:mobile_kurir_sbw/shared/widget/button/button_full.dart';
-import 'package:mobile_kurir_sbw/shared/widget/form/form_input.dart';
-import '../controller/forgot_password_screen_controller.dart';
+import '../controller/new_password_screen_controller.dart';
 
-class ForgotPasswordScreenView extends StatefulWidget {
-  const ForgotPasswordScreenView({Key? key}) : super(key: key);
+class NewPasswordScreenView extends StatefulWidget {
+  const NewPasswordScreenView({Key? key}) : super(key: key);
 
-  Widget build(context, ForgotPasswordScreenController controller) {
+  Widget build(context, NewPasswordScreenController controller) {
     controller.view = this;
 
     return Scaffold(
@@ -58,19 +55,28 @@ class ForgotPasswordScreenView extends StatefulWidget {
                     height: 24.0,
                   ),
                   FormInput(
-                    label: "Email",
-                    controller: controller.emailController,
-                    errorText: controller.errorMessage,
+                    controller: controller.passwordController,
                     showError: controller.showErrorMessage,
+                    obsecureText: true,
+                    errorText: controller.errorMessage,
+                    label: "Password",
+                  ),
+                  const SizedBox(
+                    height: 24.0,
+                  ),
+                  FormInput(
+                    controller: controller.konfirmasiController,
+                    showError: controller.showErrorMessage,
+                    obsecureText: true,
+                    errorText: controller.errorMessage,
+                    label: "Konfirmasi Password",
                   ),
                   const SizedBox(
                     height: 24.0,
                   ),
                   ButtonFull(
-                    title: "Kirim",
-                    onPressed: () {
-                      controller.validateInput();
-                    },
+                    title: "Simpan",
+                    onPressed: () => controller.validateInput(),
                   ),
                   const SizedBox(
                     height: 24.0,
@@ -100,6 +106,5 @@ class ForgotPasswordScreenView extends StatefulWidget {
   }
 
   @override
-  State<ForgotPasswordScreenView> createState() =>
-      ForgotPasswordScreenController();
+  State<NewPasswordScreenView> createState() => NewPasswordScreenController();
 }

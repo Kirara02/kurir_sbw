@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
-import 'package:mobile_kurir_sbw/shared/theme/theme_config.dart';
-import 'package:mobile_kurir_sbw/shared/widget/button/button_full.dart';
-import 'package:mobile_kurir_sbw/shared/widget/form/form_input.dart';
-import '../controller/forgot_password_screen_controller.dart';
+import '../controller/email_otp_screen_controller.dart';
 
-class ForgotPasswordScreenView extends StatefulWidget {
-  const ForgotPasswordScreenView({Key? key}) : super(key: key);
+class EmailOtpScreenView extends StatefulWidget {
+  final String email;
+  const EmailOtpScreenView({Key? key, required this.email}) : super(key: key);
 
-  Widget build(context, ForgotPasswordScreenController controller) {
+  Widget build(context, EmailOtpScreenController controller) {
     controller.view = this;
 
     return Scaffold(
@@ -46,31 +44,54 @@ class ForgotPasswordScreenView extends StatefulWidget {
                   const SizedBox(
                     height: 24.0,
                   ),
-                  const Text(
-                    "Masukkan alamat email yang Anda daftarkan",
+                  Text.rich(
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 14.0,
-                      color: Color(0xff383838),
+                    TextSpan(
+                      style: const TextStyle(
+                        color: Color(0xff383838),
+                      ),
+                      children: [
+                        const TextSpan(
+                          text:
+                              "Kami sudah mengirimkan kode verifikasi ke alamat email ",
+                        ),
+                        TextSpan(
+                          text: email,
+                          style: const TextStyle(
+                            fontWeight: bold,
+                          ),
+                        ),
+                        const TextSpan(
+                          text: " silahkan cek dan isi kode verifikasi",
+                        ),
+                      ],
                     ),
                   ),
                   const SizedBox(
                     height: 24.0,
                   ),
                   FormInput(
-                    label: "Email",
-                    controller: controller.emailController,
-                    errorText: controller.errorMessage,
+                    label: "Kode Verifikasi",
+                    controller: controller.kodeController,
                     showError: controller.showErrorMessage,
+                    errorText: controller.errorMessage,
                   ),
                   const SizedBox(
                     height: 24.0,
                   ),
                   ButtonFull(
-                    title: "Kirim",
+                    title: "Konfirmasi",
                     onPressed: () {
                       controller.validateInput();
                     },
+                  ),
+                  const SizedBox(
+                    height: 24.0,
+                  ),
+                  ButtonFull(
+                    title: "Kirim Kode Lagi",
+                    isfilled: false,
+                    onPressed: () {},
                   ),
                   const SizedBox(
                     height: 24.0,
@@ -100,6 +121,5 @@ class ForgotPasswordScreenView extends StatefulWidget {
   }
 
   @override
-  State<ForgotPasswordScreenView> createState() =>
-      ForgotPasswordScreenController();
+  State<EmailOtpScreenView> createState() => EmailOtpScreenController();
 }

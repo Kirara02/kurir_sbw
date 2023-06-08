@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
+import 'package:mobile_kurir_sbw/shared/theme/theme_config.dart';
 import '../controller/splash_screen_controller.dart';
 
 class SplashScreenView extends StatefulWidget {
@@ -9,12 +10,42 @@ class SplashScreenView extends StatefulWidget {
     controller.view = this;
 
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: const [],
-          ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/images/app_logo.png',
+              width: 146,
+            ),
+            const SizedBox(
+              height: 24.0,
+            ),
+            const Text.rich(
+              textAlign: TextAlign.center,
+              TextSpan(
+                style: TextStyle(
+                  fontSize: 26,
+                ),
+                children: [
+                  TextSpan(
+                    text: "Driver Kurir\n",
+                    style: TextStyle(
+                      color: greenColor2,
+                      fontWeight: regular,
+                    ),
+                  ),
+                  TextSpan(
+                    text: "Setia Bhakti Wanita",
+                    style: TextStyle(
+                      color: blackColor,
+                      fontWeight: bold,
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );

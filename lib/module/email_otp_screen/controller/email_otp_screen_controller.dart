@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
 import 'package:mobile_kurir_sbw/state_util.dart';
-import '../view/forgot_password_screen_view.dart';
+import '../view/email_otp_screen_view.dart';
 
-class ForgotPasswordScreenController extends State<ForgotPasswordScreenView>
+class EmailOtpScreenController extends State<EmailOtpScreenView>
     implements MvcController {
-  static late ForgotPasswordScreenController instance;
-  late ForgotPasswordScreenView view;
+  static late EmailOtpScreenController instance;
+  late EmailOtpScreenView view;
 
   @override
   void initState() {
@@ -20,20 +20,20 @@ class ForgotPasswordScreenController extends State<ForgotPasswordScreenView>
   @override
   Widget build(BuildContext context) => widget.build(context, this);
 
-  TextEditingController emailController = TextEditingController(text: '');
+  TextEditingController kodeController = TextEditingController(text: '');
 
   bool showErrorMessage = false;
   String errorMessage = '';
   void validateInput() {
-    if (emailController.text.isNotEmpty) {
+    if (kodeController.text.isNotEmpty) {
       // if (showErrorMessage != true) {
-      Get.to(EmailOtpScreenView(email: emailController.text));
+      Get.to(const NewPasswordScreenView());
       // }
     } else {
       setState(() {
-        showErrorMessage = emailController.text.isEmpty;
+        showErrorMessage = kodeController.text.isEmpty;
       });
-      errorMessage = "Email tidak ditemukan";
+      errorMessage = 'Kode tidak valid';
     }
   }
 }
