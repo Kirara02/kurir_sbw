@@ -114,6 +114,7 @@ class BerandaScreenView extends StatefulWidget {
                       GestureDetector(
                         onTap: () {
                           showModalBottomSheet(
+                            isScrollControlled: true,
                             context: context,
                             builder: (context) {
                               return ShowModal(

@@ -1,19 +1,19 @@
 {
-  "openai_key": "",
-  "modules": [
-    "splash_screen",
-    "register_screen",
-    "register2_screen",
-    "login_screen",
-    "forgot_password_screen",
-    "beranda_screen",
-    "balance_screen",
-    "profil_screen",
-    "help_screen",
-    "income_screen",
-    "order_history_screen",
-    "email_otp_screen",
-    "new_password_screen",
-    "chat_screen"
-  ]
+    "openai_key": "",
+    "modules": [
+        "splash_screen",
+        "register_screen",
+        "register2_screen",
+        "login_screen",
+        "forgot_password_screen",
+        "beranda_screen",
+        "balance_screen",
+        "profil_screen",
+        "help_screen",
+        "income_screen",
+        "order_history_screen",
+        "email_otp_screen",
+        "new_password_screen",
+        "chat_screen"
+    ]
 }
