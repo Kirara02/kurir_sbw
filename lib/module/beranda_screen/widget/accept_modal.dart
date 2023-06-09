@@ -66,6 +66,7 @@ class _AcceptModalState extends State<AcceptModal> {
             InkWell(
               onTap: () {
                 showModalBottomSheet(
+                  isScrollControlled: true,
                   context: context,
                   builder: (context) {
                     return const DetailUserModal();
