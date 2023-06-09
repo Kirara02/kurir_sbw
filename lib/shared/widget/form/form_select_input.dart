@@ -46,6 +46,7 @@ class _FormSelectState extends State<FormSelectInput> {
           decoration: InputDecoration(
             filled: true,
             fillColor: greyColor,
+            hintText: "-- Select --",
             contentPadding: const EdgeInsets.symmetric(
               horizontal: 15,
               vertical: 10,

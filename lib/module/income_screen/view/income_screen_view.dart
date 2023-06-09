@@ -10,8 +10,16 @@ class IncomeScreenView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("IncomeScreen"),
-        actions: const [],
+        title: Row(
+          children: [
+            IconButton(
+              onPressed: () => Get.to(const BerandaScreenView()),
+              icon: const Icon(Icons.arrow_back_ios),
+            ),
+            const Text("Pendapatan"),
+          ],
+        ),
+        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         child: Container(

@@ -10,8 +10,16 @@ class BalanceScreenView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("BalanceScreen"),
-        actions: const [],
+        title: Row(
+          children: [
+            IconButton(
+              onPressed: () => Get.to(const BerandaScreenView()),
+              icon: const Icon(Icons.arrow_back_ios),
+            ),
+            const Text("Balance"),
+          ],
+        ),
+        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         child: Container(

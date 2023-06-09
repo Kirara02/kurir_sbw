@@ -51,6 +51,7 @@ class LoginScreenView extends StatefulWidget {
                     label: "Email",
                     controller: controller.emailController,
                     showError: controller.showErrorMessage,
+                    errorText: controller.errorMessage,
                   ),
                   const SizedBox(
                     height: 24.0,
@@ -59,6 +60,7 @@ class LoginScreenView extends StatefulWidget {
                     label: "Password",
                     obsecureText: true,
                     showError: controller.showErrorMessage,
+                    errorText: controller.errorMessage,
                     controller: controller.passwordController,
                   ),
                   const SizedBox(

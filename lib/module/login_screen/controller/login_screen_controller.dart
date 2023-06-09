@@ -26,16 +26,16 @@ class LoginScreenController extends State<LoginScreenView>
   bool isChecked = false;
 
   bool showErrorMessage = false;
+  String errorMessage = '';
   void validateInput() {
     if (emailController.text.isNotEmpty && passwordController.text.isNotEmpty) {
-      // if (showErrorMessage != true) {
       Get.offAll(const BerandaScreenView());
-      // }
     } else {
       setState(() {
         showErrorMessage =
             emailController.text.isEmpty || passwordController.text.isEmpty;
       });
+      errorMessage = 'Kombinasi Email & Password Salah';
     }
   }
 }

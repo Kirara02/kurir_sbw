@@ -10,8 +10,16 @@ class HelpScreenView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("HelpScreen"),
-        actions: const [],
+        title: Row(
+          children: [
+            IconButton(
+              onPressed: () => Get.to(const BerandaScreenView()),
+              icon: const Icon(Icons.arrow_back_ios),
+            ),
+            const Text("Bantuan"),
+          ],
+        ),
+        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         child: Container(

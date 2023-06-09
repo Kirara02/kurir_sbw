@@ -13,6 +13,7 @@
     "income_screen",
     "order_history_screen",
     "email_otp_screen",
-    "new_password_screen"
+    "new_password_screen",
+    "chat_screen"
   ]
 }

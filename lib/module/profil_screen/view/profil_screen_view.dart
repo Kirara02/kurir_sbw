@@ -10,8 +10,16 @@ class ProfilScreenView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("ProfilScreen"),
-        actions: const [],
+        title: Row(
+          children: [
+            IconButton(
+              onPressed: () => Get.to(const BerandaScreenView()),
+              icon: const Icon(Icons.arrow_back_ios),
+            ),
+            const Text("Profil"),
+          ],
+        ),
+        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         child: Container(
