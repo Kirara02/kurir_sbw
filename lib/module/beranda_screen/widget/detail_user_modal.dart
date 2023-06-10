@@ -60,9 +60,9 @@ class DetailUserModal extends StatelessWidget {
                   ),
                 ),
               ),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text('ID Customer'),
                   Text('CUS0000001'),
                 ],
@@ -80,9 +80,9 @@ class DetailUserModal extends StatelessWidget {
                   ),
                 ),
               ),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text('Nama Lengkap'),
                   Text('Riswanto'),
                 ],
@@ -100,9 +100,9 @@ class DetailUserModal extends StatelessWidget {
                   ),
                 ),
               ),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text('No Whatsapp'),
                   Text('0821-2345-6789'),
                 ],
@@ -144,7 +144,7 @@ class DetailUserModal extends StatelessWidget {
             const SizedBox(
               height: 16.0,
             ),
-            PackingCard(
+            const PackingCard(
               title: "Indomie Goreng",
               qty: 1,
               weigth: 3,
@@ -154,7 +154,7 @@ class DetailUserModal extends StatelessWidget {
             const SizedBox(
               height: 16.0,
             ),
-            PackingCard(
+            const PackingCard(
               title: "Kratindaeng",
               qty: 1,
               weigth: 7,
@@ -173,13 +173,13 @@ class DetailUserModal extends StatelessWidget {
                   ),
                 ),
               ),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("Jumlah Dus"),
                   Text(
                     "2 Dus",
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontWeight: bold,
                     ),
                   ),
@@ -198,7 +198,7 @@ class DetailUserModal extends StatelessWidget {
                   ),
                 ),
               ),
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -208,7 +208,7 @@ class DetailUserModal extends StatelessWidget {
                       fontWeight: bold,
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 8.0,
                   ),
                   Text(
@@ -232,10 +232,10 @@ class DetailUserModal extends StatelessWidget {
                   color: yellowColor,
                   borderRadius: BorderRadius.circular(8),
                 ),
-                child: Center(
+                child: const Center(
                   child: Text(
                     'Kembali',
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 20.0,
                       color: blackColor,
                     ),

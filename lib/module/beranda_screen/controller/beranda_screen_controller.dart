@@ -22,6 +22,8 @@ class BerandaScreenController extends State<BerandaScreenView>
   @override
   Widget build(BuildContext context) => widget.build(context, this);
 
+  refresh() => setState(() {});
+
   bool userActive = true;
 
   File? imageFile;

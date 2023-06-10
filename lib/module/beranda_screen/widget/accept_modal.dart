@@ -42,9 +42,9 @@ class _AcceptModalState extends State<AcceptModal> {
                 color: const Color(0xffD0D0D0),
                 borderRadius: BorderRadius.circular(8.0),
               ),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text(
                     'Order',
                     style: TextStyle(
@@ -173,11 +173,11 @@ class _AcceptModalState extends State<AcceptModal> {
                     Container(
                       height: 38,
                       width: 38,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: whiteColor,
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_forward,
                         color: blackColor,
                       ),
@@ -185,7 +185,7 @@ class _AcceptModalState extends State<AcceptModal> {
                     const SizedBox(
                       width: 10.0,
                     ),
-                    Text(
+                    const Text(
                       "Sudah Mengirim Barang",
                       style: TextStyle(
                         fontSize: 16.0,

@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
-import 'package:mobile_kurir_sbw/shared/widget/button/button_min.dart';
-import 'package:mobile_kurir_sbw/shared/widget/form/form_file_input.dart';
-import 'package:mobile_kurir_sbw/shared/widget/form/form_select_input.dart';
-import '../controller/register2_screen_controller.dart';
 
 class Register2ScreenView extends StatefulWidget {
   const Register2ScreenView({Key? key}) : super(key: key);
@@ -46,11 +42,11 @@ class Register2ScreenView extends StatefulWidget {
                   const SizedBox(
                     height: 24.0,
                   ),
-                  FormInput(label: "NOPOL"),
+                  const FormInput(label: "NOPOL"),
                   const SizedBox(
                     height: 24.0,
                   ),
-                  FormInput(label: "No Rekening"),
+                  const FormInput(label: "No Rekening"),
                   const SizedBox(
                     height: 24.0,
                   ),
@@ -64,33 +60,31 @@ class Register2ScreenView extends StatefulWidget {
                     ],
                     selectedOption: controller.selectedBank,
                     onChanged: (value) {
-                      controller.setState(() {
-                        controller.selectedBank = value;
-                      });
+                      controller.selectedBank = value;
                     },
                   ),
                   const SizedBox(
                     height: 24.0,
                   ),
-                  FormInput(label: "Nama Rekening"),
+                  const FormInput(label: "Nama Rekening"),
                   const SizedBox(
                     height: 24.0,
                   ),
-                  FormInput(
+                  const FormInput(
                     label: "Password",
                     obsecureText: true,
                   ),
                   const SizedBox(
                     height: 24.0,
                   ),
-                  FormInput(
+                  const FormInput(
                     label: "Konfirmasi Password",
                     obsecureText: true,
                   ),
                   const SizedBox(
                     height: 24.0,
                   ),
-                  FormFileInput(label: "Foto Profil"),
+                  const FormFileInput(label: "Foto Profil"),
                   const SizedBox(
                     height: 24.0,
                   ),
@@ -102,7 +96,7 @@ class Register2ScreenView extends StatefulWidget {
                         isfilled: false,
                         onPressed: () => Get.back(),
                       ),
-                      ButtonMin(
+                      const ButtonMin(
                         title: "Daftar",
                       )
                     ],

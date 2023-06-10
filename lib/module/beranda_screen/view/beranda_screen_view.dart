@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:mobile_kurir_sbw/core.dart';
 import 'package:mobile_kurir_sbw/module/beranda_screen/widget/show_modal.dart';
 
@@ -19,7 +18,7 @@ class BerandaScreenView extends StatefulWidget {
             GestureDetector(
               onTap: () {
                 controller.userActive = !controller.userActive;
-                controller.setState(() {});
+                controller.refresh();
               },
               child: Container(
                 padding: const EdgeInsets.all(10.0),
@@ -86,75 +85,73 @@ class BerandaScreenView extends StatefulWidget {
             ],
           ),
         ),
-        body: Container(
-          child: Stack(
-            children: [
-              Container(
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                      "assets/images/map.png",
-                    ),
-                    fit: BoxFit.cover,
+        body: Stack(
+          children: [
+            Container(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/images/map.png",
                   ),
+                  fit: BoxFit.cover,
                 ),
               ),
-              Positioned(
-                top: 16.0,
-                left: 16.0,
-                right: 16.0,
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          showModalBottomSheet(
-                            isScrollControlled: true,
-                            context: context,
-                            builder: (context) {
-                              return ShowModal(
-                                controller: controller,
-                              );
-                            },
-                          );
-                        },
-                        child: Container(
-                          height: 70.0,
-                          width: 70.0,
-                          padding: const EdgeInsets.all(10.0),
-                          decoration: BoxDecoration(
-                            color: whiteColor,
-                            shape: BoxShape.circle,
-                          ),
-                          child: Image.asset('assets/images/alert.png'),
+            ),
+            Positioned(
+              top: 16.0,
+              left: 16.0,
+              right: 16.0,
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        showModalBottomSheet(
+                          isScrollControlled: true,
+                          context: context,
+                          builder: (context) {
+                            return ShowModal(
+                              controller: controller,
+                            );
+                          },
+                        );
+                      },
+                      child: Container(
+                        height: 70.0,
+                        width: 70.0,
+                        padding: const EdgeInsets.all(10.0),
+                        decoration: const BoxDecoration(
+                          color: whiteColor,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Image.asset('assets/images/alert.png'),
+                      ),
+                    ),
+                    Container(
+                      height: 42.0,
+                      width: 42.0,
+                      decoration: BoxDecoration(
+                        color: whiteColor,
+                        border: Border.all(
+                          color: blackColor,
+                          width: 1,
                         ),
                       ),
-                      Container(
-                        height: 42.0,
-                        width: 42.0,
-                        decoration: BoxDecoration(
-                          color: whiteColor,
-                          border: Border.all(
-                            color: blackColor,
-                            width: 1,
-                          ),
-                        ),
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: Icon(Icons.my_location),
-                        ),
-                      )
-                    ],
-                  ),
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.my_location),
+                      ),
+                    )
+                  ],
                 ),
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
       ),
     );

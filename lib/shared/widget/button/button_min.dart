@@ -19,7 +19,7 @@ class ButtonMin extends StatelessWidget {
     return InkWell(
       onTap: onPressed,
       child: Container(
-        constraints: BoxConstraints(minWidth: 150),
+        constraints: const BoxConstraints(minWidth: 150),
         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 40),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),

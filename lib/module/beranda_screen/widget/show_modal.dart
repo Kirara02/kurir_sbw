@@ -58,9 +58,9 @@ class _ShowModalState extends State<ShowModal> {
                 color: greyColor3,
                 borderRadius: BorderRadius.circular(8.0),
               ),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text(
                     'Order',
                     style: TextStyle(
@@ -79,14 +79,14 @@ class _ShowModalState extends State<ShowModal> {
             const SizedBox(
               height: 16.0,
             ),
-            Row(
+            const Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Icon(
                   Icons.location_on_outlined,
                   color: greenColor,
                 ),
-                const SizedBox(
+                SizedBox(
                   width: 8.0,
                 ),
                 Expanded(
@@ -100,7 +100,7 @@ class _ShowModalState extends State<ShowModal> {
                           fontWeight: medium,
                         ),
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: 4.0,
                       ),
                       Text(
@@ -118,14 +118,14 @@ class _ShowModalState extends State<ShowModal> {
             const SizedBox(
               height: 16.0,
             ),
-            Row(
+            const Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Icon(
                   Icons.location_on_outlined,
                   color: greenColor,
                 ),
-                const SizedBox(
+                SizedBox(
                   width: 8.0,
                 ),
                 Expanded(
@@ -139,7 +139,7 @@ class _ShowModalState extends State<ShowModal> {
                           fontWeight: medium,
                         ),
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: 4.0,
                       ),
                       Text(
@@ -166,9 +166,9 @@ class _ShowModalState extends State<ShowModal> {
                   ),
                 ),
               ),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text('Jumlah Dus'),
                   Text(
                     '2 Dus',
@@ -193,63 +193,63 @@ class _ShowModalState extends State<ShowModal> {
                 ),
                 color: const Color(0xffE7E7E7),
               ),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         'Pembayaran: Transfer',
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: bold,
                         ),
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: 4.0,
                       ),
                       Text(
                         'Jarak: 3.3 KM',
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: bold,
                         ),
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: 4.0,
                       ),
                       Text(
                         'Jumlah Dus',
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: bold,
                         ),
                       ),
                     ],
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 10.0,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
-                    children: const [
+                    children: [
                       Text(
                         'Harga',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: 4.0,
                       ),
                       Text(
                         'Rp 8,000',
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: bold,
                           fontSize: 18.0,
                         ),
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: 4.0,
                       ),
                       Text(
                         '2 Dus',
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: bold,
                         ),
                       ),

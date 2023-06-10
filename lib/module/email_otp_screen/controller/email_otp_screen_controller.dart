@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
-import 'package:mobile_kurir_sbw/state_util.dart';
-import '../view/email_otp_screen_view.dart';
 
 class EmailOtpScreenController extends State<EmailOtpScreenView>
     implements MvcController {

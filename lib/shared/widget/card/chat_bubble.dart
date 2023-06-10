@@ -8,7 +8,7 @@ class ChatBubble extends StatelessWidget {
   final bool isChecked;
 
   const ChatBubble(
-      {required this.message,
+      {super.key, required this.message,
       required this.time,
       required this.isMe,
       required this.isChecked});
@@ -17,7 +17,7 @@ class ChatBubble extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 4.0),
+      margin: const EdgeInsets.symmetric(vertical: 4.0),
       alignment: isMe ? Alignment.centerRight : Alignment.centerLeft,
       child: IntrinsicWidth(
         child: Row(
@@ -25,7 +25,7 @@ class ChatBubble extends StatelessWidget {
           children: [
             Flexible(
               child: Container(
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
                   color: isMe ? greyColor3 : Colors.grey[100],
                   borderRadius: BorderRadius.circular(16.0),
@@ -37,13 +37,13 @@ class ChatBubble extends StatelessWidget {
                       children: [
                         Text(
                           message,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.black,
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(height: 8.0),
+                    const SizedBox(height: 8.0),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
@@ -53,13 +53,13 @@ class ChatBubble extends StatelessWidget {
                             color: Color(0xff979797),
                           ),
                         ),
-                        SizedBox(width: 8.0),
+                        const SizedBox(width: 8.0),
                         isChecked
-                            ? Icon(
+                            ? const Icon(
                                 Icons.done_all,
                                 color: greenColor2,
                               )
-                            : SizedBox(),
+                            : const SizedBox(),
                       ],
                     ),
                   ],

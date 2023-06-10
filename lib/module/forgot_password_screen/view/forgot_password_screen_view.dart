@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
-import 'package:mobile_kurir_sbw/shared/theme/theme_config.dart';
-import 'package:mobile_kurir_sbw/shared/widget/button/button_full.dart';
-import 'package:mobile_kurir_sbw/shared/widget/form/form_input.dart';
-import '../controller/forgot_password_screen_controller.dart';
 
 class ForgotPasswordScreenView extends StatefulWidget {
   const ForgotPasswordScreenView({Key? key}) : super(key: key);

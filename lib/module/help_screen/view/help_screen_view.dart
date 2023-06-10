@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
-import '../controller/help_screen_controller.dart';
 
 class HelpScreenView extends StatefulWidget {
   const HelpScreenView({Key? key}) : super(key: key);
@@ -24,8 +23,8 @@ class HelpScreenView extends StatefulWidget {
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: const [],
+          child: const Column(
+            children: [],
           ),
         ),
       ),

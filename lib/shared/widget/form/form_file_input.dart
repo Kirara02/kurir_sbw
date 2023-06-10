@@ -52,7 +52,7 @@ class _FormFileInputState extends State<FormFileInput> {
               color: blueColor,
               borderRadius: BorderRadius.circular(4),
             ),
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
@@ -60,7 +60,7 @@ class _FormFileInputState extends State<FormFileInput> {
                   color: whiteColor,
                   size: 18,
                 ),
-                const SizedBox(
+                SizedBox(
                   width: 5.0,
                 ),
                 Text(
@@ -75,7 +75,7 @@ class _FormFileInputState extends State<FormFileInput> {
             ),
           ),
         ),
-        Text(
+        const Text(
           "File type: png Max size: 0.5 MB",
           style: TextStyle(
             fontSize: 14.0,

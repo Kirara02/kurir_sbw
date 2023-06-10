@@ -20,6 +20,8 @@ class LoginScreenController extends State<LoginScreenView>
   @override
   Widget build(BuildContext context) => widget.build(context, this);
 
+  refresh() => setState(() {});
+
   TextEditingController emailController = TextEditingController(text: '');
   TextEditingController passwordController = TextEditingController(text: '');
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
-import '../controller/balance_screen_controller.dart';
 
 class BalanceScreenView extends StatefulWidget {
   const BalanceScreenView({Key? key}) : super(key: key);
@@ -24,8 +23,8 @@ class BalanceScreenView extends StatefulWidget {
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: const [],
+          child: const Column(
+            children: [],
           ),
         ),
       ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
-import '../controller/new_password_screen_controller.dart';
 
 class NewPasswordScreenView extends StatefulWidget {
   const NewPasswordScreenView({Key? key}) : super(key: key);

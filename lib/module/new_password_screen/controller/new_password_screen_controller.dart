@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
-import 'package:mobile_kurir_sbw/state_util.dart';
-import '../view/new_password_screen_view.dart';
 
 class NewPasswordScreenController extends State<NewPasswordScreenView>
     implements MvcController {

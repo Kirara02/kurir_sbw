@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
-import '../controller/email_otp_screen_controller.dart';
 
 class EmailOtpScreenView extends StatefulWidget {
   final String email;

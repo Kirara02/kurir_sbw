@@ -83,7 +83,7 @@ class _ImageUploadModalState extends State<ImageUploadModal> {
                       borderRadius: BorderRadius.circular(4),
                       child: Image.file(
                         _imageFile!,
-                        fit: BoxFit.fitWidth,
+                        fit: BoxFit.fill,
                         height: 130,
                       ),
                     ),

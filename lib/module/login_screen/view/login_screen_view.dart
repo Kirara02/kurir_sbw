@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
-import 'package:mobile_kurir_sbw/shared/widget/button/button_full.dart';
-import 'package:mobile_kurir_sbw/shared/widget/form/form_input.dart';
-import 'package:mobile_kurir_sbw/shared/theme/theme_config.dart';
-import '../controller/login_screen_controller.dart';
 
 class LoginScreenView extends StatefulWidget {
   const LoginScreenView({Key? key}) : super(key: key);
@@ -66,18 +62,17 @@ class LoginScreenView extends StatefulWidget {
                   const SizedBox(
                     height: 24.0,
                   ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          controller.setState(() {
-                            controller.isChecked = !controller.isChecked;
-                          });
-                        },
-                        child: Container(
-                          height: 24,
-                          width: 24,
+                  GestureDetector(
+                    onTap: () {
+                      controller.isChecked = !controller.isChecked;
+                      controller.refresh();
+                    },
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 26,
+                          width: 26,
                           decoration: BoxDecoration(
                             color: controller.isChecked
                                 ? greenColor
@@ -98,17 +93,17 @@ class LoginScreenView extends StatefulWidget {
                                 )
                               : null,
                         ),
-                      ),
-                      const SizedBox(
-                        width: 3.0,
-                      ),
-                      const Text(
-                        "Ingat Password",
-                        style: TextStyle(
-                          fontSize: 14.0,
+                        const SizedBox(
+                          width: 3.0,
                         ),
-                      ),
-                    ],
+                        const Text(
+                          "Ingat Password",
+                          style: TextStyle(
+                            fontSize: 14.0,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 24.0,

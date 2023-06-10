@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
-import 'package:mobile_kurir_sbw/state_util.dart';
-import '../view/forgot_password_screen_view.dart';
 
 class ForgotPasswordScreenController extends State<ForgotPasswordScreenView>
     implements MvcController {

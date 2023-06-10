@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
-import 'package:mobile_kurir_sbw/shared/widget/form/form_date_input.dart';
-import 'package:mobile_kurir_sbw/shared/widget/form/form_textarea.dart';
-import 'package:mobile_kurir_sbw/shared/widget/form/form_year_input.dart';
-import '../controller/register_screen_controller.dart';
 
 class RegisterScreenView extends StatefulWidget {
   const RegisterScreenView({Key? key}) : super(key: key);
@@ -47,7 +43,7 @@ class RegisterScreenView extends StatefulWidget {
                   const SizedBox(
                     height: 24.0,
                   ),
-                  FormInput(
+                  const FormInput(
                     label: "Nama Lengkap",
                     // controller: controller.emailController,
                     // showError: controller.showErrorMessage,
@@ -55,7 +51,7 @@ class RegisterScreenView extends StatefulWidget {
                   const SizedBox(
                     height: 24.0,
                   ),
-                  FormInput(
+                  const FormInput(
                     label: "Email",
                     // controller: controller.emailController,
                     // showError: controller.showErrorMessage,
@@ -63,15 +59,15 @@ class RegisterScreenView extends StatefulWidget {
                   const SizedBox(
                     height: 24.0,
                   ),
-                  FormDateInput(label: 'Tanggal Lahir'),
+                  const FormDateInput(label: 'Tanggal Lahir'),
                   const SizedBox(
                     height: 24.0,
                   ),
-                  FormTextarea(label: "Alamat"),
+                  const FormTextarea(label: "Alamat"),
                   const SizedBox(
                     height: 24.0,
                   ),
-                  FormInput(
+                  const FormInput(
                     label: "No Whatsapp",
 
                     // showError: controller.showErrorMessage,
@@ -80,7 +76,7 @@ class RegisterScreenView extends StatefulWidget {
                   const SizedBox(
                     height: 24.0,
                   ),
-                  FormInput(
+                  const FormInput(
                     label: "No Imei/Device Id",
 
                     // showError: controller.showErrorMessage,
@@ -89,7 +85,7 @@ class RegisterScreenView extends StatefulWidget {
                   const SizedBox(
                     height: 24.0,
                   ),
-                  FormInput(
+                  const FormInput(
                     label: "SIM",
 
                     // showError: controller.showErrorMessage,
@@ -98,7 +94,7 @@ class RegisterScreenView extends StatefulWidget {
                   const SizedBox(
                     height: 24.0,
                   ),
-                  FormInput(
+                  const FormInput(
                     label: "NIK",
 
                     // showError: controller.showErrorMessage,
@@ -107,7 +103,7 @@ class RegisterScreenView extends StatefulWidget {
                   const SizedBox(
                     height: 24.0,
                   ),
-                  FormInput(
+                  const FormInput(
                     label: "Nama Kendaraan",
 
                     // showError: controller.showErrorMessage,
@@ -116,7 +112,7 @@ class RegisterScreenView extends StatefulWidget {
                   const SizedBox(
                     height: 24.0,
                   ),
-                  FormYearInput(label: "Tahun Kendaraan"),
+                  const FormYearInput(label: "Tahun Kendaraan"),
                   const SizedBox(
                     height: 24.0,
                   ),

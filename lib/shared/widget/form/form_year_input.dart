@@ -86,7 +86,7 @@ class _FormYearInputState extends State<FormYearInput> {
               onPressed: () {
                 _selectDate(context);
               },
-              icon: Icon(Icons.calendar_today),
+              icon: const Icon(Icons.calendar_today),
             ),
           ),
         )

@@ -50,7 +50,7 @@ class PackingCard extends StatelessWidget {
                         horizontal: 4,
                         vertical: 2,
                       ),
-                      decoration: BoxDecoration(color: greenColor),
+                      decoration: const BoxDecoration(color: greenColor),
                       child: Text(kategori),
                     ),
                   ],
