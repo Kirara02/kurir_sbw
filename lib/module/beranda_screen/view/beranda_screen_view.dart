@@ -11,9 +11,14 @@ class BerandaScreenView extends StatefulWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           foregroundColor: whiteColor,
           backgroundColor: greenColor2,
           title: const Text('Driver'),
+          leading: IconButton(
+            onPressed: () => Get.to(const BalanceScreenView()),
+            icon: const Icon(Icons.menu),
+          ),
           actions: [
             GestureDetector(
               onTap: () {
@@ -37,65 +42,30 @@ class BerandaScreenView extends StatefulWidget {
             )
           ],
         ),
-        drawer: Drawer(
-          child: ListView(
-            children: [
-              UserAccountsDrawerHeader(
-                accountName: const Text("Kirara Bernstein"),
-                accountEmail: const Text("kirara@yahoo.com"),
-                currentAccountPicture: const CircleAvatar(
-                  backgroundImage: AssetImage('assets/images/user.png'),
-                ),
-                decoration: BoxDecoration(
-                  color: Colors.blueGrey[900],
-                ),
-              ),
-              ListTile(
-                leading: const Icon(Icons.home),
-                title: const Text("Home"),
-                onTap: () => Get.to(const BerandaScreenView()),
-              ),
-              ListTile(
-                leading: const Icon(Icons.balance),
-                title: const Text("Balance"),
-                onTap: () => Get.to(const BalanceScreenView()),
-              ),
-              ListTile(
-                leading: const Icon(Icons.attach_money),
-                title: const Text("Pendapatan"),
-                onTap: () => Get.to(const IncomeScreenView()),
-              ),
-              ListTile(
-                leading: const Icon(Icons.account_circle),
-                title: const Text("Profil"),
-                onTap: () => Get.to(const ProfilScreenView()),
-              ),
-              ListTile(
-                leading: const Icon(Icons.help),
-                title: const Text("Bantuan"),
-                onTap: () => Get.to(const HelpScreenView()),
-              ),
-              ListTile(
-                leading: const Icon(
-                  Icons.logout,
-                ),
-                title: const Text("Logout"),
-                onTap: () => Get.offAll(const LoginScreenView()),
-              )
-            ],
-          ),
-        ),
         body: Stack(
           children: [
-            Container(
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                    "assets/images/map.png",
+            GestureDetector(
+              onTap: () {
+                showModalBottomSheet(
+                  isScrollControlled: true,
+                  context: context,
+                  builder: (context) {
+                    return ShowModal(
+                      controller: controller,
+                    );
+                  },
+                );
+              },
+              child: Container(
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      "assets/images/map.png",
+                    ),
+                    fit: BoxFit.cover,
                   ),
-                  fit: BoxFit.cover,
                 ),
               ),
             ),
@@ -110,17 +80,7 @@ class BerandaScreenView extends StatefulWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     GestureDetector(
-                      onTap: () {
-                        showModalBottomSheet(
-                          isScrollControlled: true,
-                          context: context,
-                          builder: (context) {
-                            return ShowModal(
-                              controller: controller,
-                            );
-                          },
-                        );
-                      },
+                      onTap: () {},
                       child: Container(
                         height: 70.0,
                         width: 70.0,
