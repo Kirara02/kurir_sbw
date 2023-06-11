@@ -17,4 +17,35 @@ class HelpScreenController extends State<HelpScreenView> implements MvcControlle
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  String selectedParent = '';
+
+  final List<String> mainMenu = [
+    'Cara menelpon kantor',
+    'Cara pulihkan password',
+    'Cara menggunakan emergency button',
+  ];
+
+  final Map<String, List<String>> subMenu = {
+    'Cara menelpon kantor': [
+      'Panggil nomor kantor kami di +123456789.',
+    ],
+    'Cara pulihkan password': [
+      'Klik pada tombol "Lupa Password" dan ikuti petunjuk yang diberikan.',
+    ],
+    'Cara menggunakan emergency button': [
+      'Tekan tombol emergency button selama 3 detik untuk mengaktifkannya.',
+    ],
+  };
+
+  void toggleSubMenu(String parent) {
+    setState(() {
+      if (selectedParent == parent) {
+        selectedParent = '';
+      } else {
+        selectedParent = parent;
+      }
+    });
+  }
+
 }
