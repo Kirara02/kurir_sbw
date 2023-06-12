@@ -48,67 +48,69 @@ class ChatScreenView extends StatefulWidget {
         ],
         automaticallyImplyLeading: false,
       ),
-      body: Column(
-        children: [
-          Expanded(
-            child: ListView(
-              padding: const EdgeInsets.all(16.0),
-              children: const [
-                ChatBubble(
-                    message: 'Antar sesuai lokasi?',
-                    isMe: true,
-                    time: '7.30 PM',
-                    isChecked: true),
-                ChatBubble(
-                    message: 'Iya...',
-                    isMe: false,
-                    time: '7.35 PM',
-                    isChecked: false),
-                ChatBubble(
-                    message: 'Oke siap.....',
-                    isMe: true,
-                    time: '7.40 PM',
-                    isChecked: true),
-              ],
+      body: SafeArea(
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView(
+                padding: const EdgeInsets.all(16.0),
+                children: const [
+                  ChatBubble(
+                      message: 'Antar sesuai lokasi?',
+                      isMe: true,
+                      time: '7.30 PM',
+                      isChecked: true),
+                  ChatBubble(
+                      message: 'Iya...',
+                      isMe: false,
+                      time: '7.35 PM',
+                      isChecked: false),
+                  ChatBubble(
+                      message: 'Oke siap.....',
+                      isMe: true,
+                      time: '7.40 PM',
+                      isChecked: true),
+                ],
+              ),
             ),
-          ),
-          Container(
-            padding: const EdgeInsets.all(10.0),
-            decoration: const BoxDecoration(
-              color: greenColor,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: 'Ketik pesan anda...',
-                      hintStyle: const TextStyle(
-                        color: Color(0xffD9D9D9),
-                      ),
-                      prefixIcon: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.camera_alt,
+            Container(
+              padding: const EdgeInsets.all(10.0),
+              decoration: const BoxDecoration(
+                color: greenColor,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: 'Ketik pesan anda...',
+                        hintStyle: const TextStyle(
                           color: Color(0xffD9D9D9),
                         ),
-                      ),
-                      suffixIcon: IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.send_sharp,
-                          color: Color(0xffD9D9D9),
+                        prefixIcon: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.camera_alt,
+                            color: Color(0xffD9D9D9),
+                          ),
+                        ),
+                        suffixIcon: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.send_sharp,
+                            color: Color(0xffD9D9D9),
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

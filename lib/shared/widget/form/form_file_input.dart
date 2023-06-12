@@ -7,7 +7,9 @@ import 'package:mobile_kurir_sbw/core.dart';
 
 class FormFileInput extends StatefulWidget {
   final String label;
-  const FormFileInput({Key? key, required this.label}) : super(key: key);
+  final String maxSize;
+  const FormFileInput({Key? key, required this.label, this.maxSize = '0.5'})
+      : super(key: key);
 
   @override
   State<FormFileInput> createState() => _FormFileInputState();
@@ -75,26 +77,12 @@ class _FormFileInputState extends State<FormFileInput> {
             ),
           ),
         ),
-        const Text(
-          "File type: png Max size: 0.5 MB",
+        Text(
+          "File type: png Max size: ${widget.maxSize} MB",
           style: TextStyle(
             fontSize: 14.0,
             fontWeight: light,
             color: Color(0xff888888),
-          ),
-        ),
-        const SizedBox(
-          height: 24.0,
-        ),
-        const SizedBox(
-          width: double.infinity,
-          child: Text(
-            "Tahap 2/2",
-            textAlign: TextAlign.start,
-            style: TextStyle(
-              fontSize: 14.0,
-              color: Color(0xff979797),
-            ),
           ),
         ),
       ],

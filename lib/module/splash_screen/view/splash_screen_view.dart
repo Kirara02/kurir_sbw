@@ -8,42 +8,44 @@ class SplashScreenView extends StatefulWidget {
     controller.view = this;
 
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              'assets/images/app_logo.png',
-              width: 146,
-            ),
-            const SizedBox(
-              height: 24.0,
-            ),
-            const Text.rich(
-              textAlign: TextAlign.center,
-              TextSpan(
-                style: TextStyle(
-                  fontSize: 26,
-                ),
-                children: [
-                  TextSpan(
-                    text: "Driver Kurir\n",
-                    style: TextStyle(
-                      color: greenColor2,
-                      fontWeight: regular,
-                    ),
-                  ),
-                  TextSpan(
-                    text: "Setia Bhakti Wanita",
-                    style: TextStyle(
-                      color: blackColor,
-                      fontWeight: bold,
-                    ),
-                  )
-                ],
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/images/app_logo.png',
+                width: 146,
               ),
-            ),
-          ],
+              const SizedBox(
+                height: 24.0,
+              ),
+              const Text.rich(
+                textAlign: TextAlign.center,
+                TextSpan(
+                  style: TextStyle(
+                    fontSize: 26,
+                  ),
+                  children: [
+                    TextSpan(
+                      text: "Driver Kurir\n",
+                      style: TextStyle(
+                        color: greenColor2,
+                        fontWeight: regular,
+                      ),
+                    ),
+                    TextSpan(
+                      text: "Setia Bhakti Wanita",
+                      style: TextStyle(
+                        color: blackColor,
+                        fontWeight: bold,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

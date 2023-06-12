@@ -5,7 +5,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:mobile_kurir_sbw/core.dart';
-import 'package:mobile_kurir_sbw/module/beranda_screen/widget/success_modal.dart';
 
 class ImageUploadModal extends StatefulWidget {
   final BerandaScreenController controller;

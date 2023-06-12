@@ -9,9 +9,9 @@ class BalanceScreenView extends StatefulWidget {
   Widget build(context, BalanceScreenController controller) {
     controller.view = this;
 
-    return SafeArea(
-      child: Scaffold(
-        body: SingleChildScrollView(
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Container(
             padding: const EdgeInsets.all(16.0),
             child: Column(

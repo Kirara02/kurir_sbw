@@ -11,9 +11,9 @@ class IncomeScreenView extends StatefulWidget {
 
     final dateFormat = DateFormat('d');
 
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
@@ -125,7 +125,7 @@ class IncomeScreenView extends StatefulWidget {
                                   height: 4.0,
                                 ),
                                 Container(
-                                  padding: const EdgeInsets.all(4.0),
+                                  padding: const EdgeInsets.all(5.0),
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: isSelected

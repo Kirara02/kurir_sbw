@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
+import 'package:mobile_kurir_sbw/module/beranda_screen/widget/emergency_confirm_modal.dart';
 import 'package:mobile_kurir_sbw/module/beranda_screen/widget/show_modal.dart';
 
 class BerandaScreenView extends StatefulWidget {
@@ -8,41 +9,41 @@ class BerandaScreenView extends StatefulWidget {
   Widget build(context, BerandaScreenController controller) {
     controller.view = this;
 
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          foregroundColor: whiteColor,
-          backgroundColor: greenColor2,
-          title: const Text('Driver'),
-          leading: IconButton(
-            onPressed: () => Get.to(const BalanceScreenView()),
-            icon: const Icon(Icons.menu),
-          ),
-          actions: [
-            GestureDetector(
-              onTap: () {
-                controller.userActive = !controller.userActive;
-                controller.refresh();
-              },
-              child: Container(
-                padding: const EdgeInsets.all(10.0),
-                margin: const EdgeInsets.only(right: 10.0),
-                decoration: BoxDecoration(
-                  color: controller.userActive == true ? greenColor : redColor,
-                  borderRadius: BorderRadius.circular(6),
-                ),
-                child: Text(
-                  controller.userActive == true ? 'AKTIF' : 'NON-AKTIF',
-                  style: const TextStyle(
-                    fontWeight: bold,
-                  ),
+    return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        foregroundColor: whiteColor,
+        backgroundColor: greenColor2,
+        title: const Text('Driver'),
+        leading: IconButton(
+          onPressed: () => Get.to(const BalanceScreenView()),
+          icon: const Icon(Icons.menu),
+        ),
+        actions: [
+          GestureDetector(
+            onTap: () {
+              controller.userActive = !controller.userActive;
+              controller.refresh();
+            },
+            child: Container(
+              padding: const EdgeInsets.all(10.0),
+              margin: const EdgeInsets.only(right: 10.0),
+              decoration: BoxDecoration(
+                color: controller.userActive == true ? greenColor : redColor,
+                borderRadius: BorderRadius.circular(6),
+              ),
+              child: Text(
+                controller.userActive == true ? 'AKTIF' : 'NON-AKTIF',
+                style: const TextStyle(
+                  fontWeight: bold,
                 ),
               ),
-            )
-          ],
-        ),
-        body: Stack(
+            ),
+          )
+        ],
+      ),
+      body: SafeArea(
+        child: Stack(
           children: [
             GestureDetector(
               onTap: () {
@@ -80,7 +81,11 @@ class BerandaScreenView extends StatefulWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        showDialog(context: context, builder: (context) {
+                          return EmergencyConfirmModal();
+                        },);
+                      },
                       child: Container(
                         height: 70.0,
                         width: 70.0,

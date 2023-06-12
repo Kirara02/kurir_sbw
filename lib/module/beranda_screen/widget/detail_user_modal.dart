@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
+import 'package:mobile_kurir_sbw/shared/widget/card/modal_data.dart';
 import 'package:mobile_kurir_sbw/shared/widget/card/modal_data_alamat.dart';
 
 class DetailUserModal extends StatelessWidget {
@@ -52,63 +53,15 @@ class DetailUserModal extends StatelessWidget {
             const SizedBox(
               height: 16.0,
             ),
-            Container(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              decoration: const BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(
-                    color: Color(0xffE7E7E7),
-                  ),
-                ),
-              ),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('ID Customer'),
-                  Text('CUS0000001'),
-                ],
-              ),
-            ),
+            const ModalData(title: 'ID Customer', value: 'CUS0000001'),
             const SizedBox(
               height: 16.0,
             ),
-            Container(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              decoration: const BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(
-                    color: Color(0xffE7E7E7),
-                  ),
-                ),
-              ),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Nama Lengkap'),
-                  Text('Riswanto'),
-                ],
-              ),
-            ),
+            const ModalData(title: 'Nama Lengkap', value: 'Riswanto'),
             const SizedBox(
               height: 16.0,
             ),
-            Container(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              decoration: const BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(
-                    color: Color(0xffE7E7E7),
-                  ),
-                ),
-              ),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('No Whatsapp'),
-                  Text('0821-2345-6789'),
-                ],
-              ),
-            ),
+            const ModalData(title: 'No Whatsapp', value: '0821-2345-6789'),
             const SizedBox(
               height: 16.0,
             ),
@@ -165,28 +118,7 @@ class DetailUserModal extends StatelessWidget {
             const SizedBox(
               height: 16.0,
             ),
-            Container(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              decoration: const BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(
-                    color: Color(0xffE7E7E7),
-                  ),
-                ),
-              ),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("Jumlah Dus"),
-                  Text(
-                    "2 Dus",
-                    style: TextStyle(
-                      fontWeight: bold,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            ModalData(title: 'Jumlah Dus', value: '2 Dus'),
             const SizedBox(
               height: 16.0,
             ),

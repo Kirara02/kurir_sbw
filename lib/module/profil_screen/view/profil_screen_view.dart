@@ -26,93 +26,95 @@ class ProfilScreenView extends StatefulWidget {
         ),
         automaticallyImplyLeading: false,
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              Container(
-                alignment: Alignment.center,
-                child: Image.asset(
-                  'assets/images/user.png',
-                  width: 120,
-                  height: 120,
-                ),
-              ),
-              const SizedBox(
-                height: 24.0,
-              ),
-              Container(
-                padding: const EdgeInsets.only(bottom: 8.0),
-                decoration: const BoxDecoration(
-                    border: Border(
-                  bottom: BorderSide(color: yellowColor2),
-                )),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('Nama Driver'),
-                    Text(
-                      'John Doe',
-                      style: const TextStyle(
-                        fontWeight: bold,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 24.0,
-              ),
-              Container(
-                padding: const EdgeInsets.only(bottom: 8.0),
-                decoration: const BoxDecoration(
-                    border: Border(
-                  bottom: BorderSide(color: yellowColor2),
-                )),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('No Driver'),
-                    Text(
-                      'DRI0000001',
-                      style: const TextStyle(
-                        fontWeight: bold,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 24.0,
-              ),
-              Container(
-                padding: const EdgeInsets.only(bottom: 8.0),
-                decoration: const BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(color: yellowColor2),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                Container(
+                  alignment: Alignment.center,
+                  child: Image.asset(
+                    'assets/images/user.png',
+                    width: 120,
+                    height: 120,
                   ),
                 ),
-                child: const Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Alamat Driver',
-                      style: const TextStyle(
-                        fontWeight: bold,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 4.0,
-                    ),
-                    Text(
-                      'Jl. Jemursari Sel. I No.15, Jemur Wonosari, Kec. Wonocolo, Kota SBY, Jawa Timur 60237',
-                    ),
-                  ],
+                const SizedBox(
+                  height: 24.0,
                 ),
-              ),
-            ],
+                Container(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  decoration: const BoxDecoration(
+                      border: Border(
+                    bottom: BorderSide(color: yellowColor2),
+                  )),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Nama Driver'),
+                      Text(
+                        'John Doe',
+                        style: const TextStyle(
+                          fontWeight: bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 24.0,
+                ),
+                Container(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  decoration: const BoxDecoration(
+                      border: Border(
+                    bottom: BorderSide(color: yellowColor2),
+                  )),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('No Driver'),
+                      Text(
+                        'DRI0000001',
+                        style: const TextStyle(
+                          fontWeight: bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 24.0,
+                ),
+                Container(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(color: yellowColor2),
+                    ),
+                  ),
+                  child: const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Alamat Driver',
+                        style: const TextStyle(
+                          fontWeight: bold,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 4.0,
+                      ),
+                      Text(
+                        'Jl. Jemursari Sel. I No.15, Jemur Wonosari, Kec. Wonocolo, Kota SBY, Jawa Timur 60237',
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
