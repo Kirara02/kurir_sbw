@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:mobile_kurir_sbw/core.dart';
+import 'package:mobile_kurir_sbw/shared/widget/card/income_card.dart';
 
 class IncomeScreenView extends StatefulWidget {
   const IncomeScreenView({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class IncomeScreenView extends StatefulWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               decoration: const BoxDecoration(
                 color: greenColor2,
                 borderRadius: BorderRadius.only(
@@ -29,16 +30,19 @@ class IncomeScreenView extends StatefulWidget {
                   Row(
                     children: [
                       GestureDetector(
-                        onTap: () => Get.to(const BerandaScreenView()),
+                        onTap: () => Get.back(),
                         child: const Icon(
                           Icons.arrow_back_ios,
                           size: 20,
                           color: whiteColor,
                         ),
                       ),
+                      const SizedBox(
+                        width: 8.0,
+                      ),
                       const Text(
                         "Pendapatan",
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 20.0,
                           color: whiteColor,
                         ),
@@ -64,7 +68,7 @@ class IncomeScreenView extends StatefulWidget {
                             .format(controller.selectedDate),
                         style: const TextStyle(
                           fontSize: 14.0,
-                          fontWeight: semiBold,
+                          fontWeight: FontWeight.bold,
                           color: whiteColor,
                         ),
                       ),
@@ -83,70 +87,103 @@ class IncomeScreenView extends StatefulWidget {
                   ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width,
-                    child: Expanded(
-                      child: SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: controller
-                              .getMonthCalendarDays(controller.selectedDate)
-                              .map((date) {
-                            bool isSelected = controller.selectedDate.day ==
-                                    date.day &&
+                    height: 60.0,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: controller
+                          .getMonthCalendarDays(controller.selectedDate)
+                          .length,
+                      itemBuilder: (context, index) {
+                        final date = controller.getMonthCalendarDays(
+                            controller.selectedDate)[index];
+                        final isSelected =
+                            controller.selectedDate.day == date.day &&
                                 controller.selectedDate.month == date.month &&
                                 controller.selectedDate.year == date.year;
-                            bool isToday = DateTime.now().day == date.day &&
-                                DateTime.now().month == date.month &&
-                                DateTime.now().year == date.year;
 
-                            return GestureDetector(
-                              onTap: () => controller.handleDateSelected(date),
-                              child: Container(
-                                width: 60,
-                                height: 60,
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      DateFormat('EEE').format(date),
-                                      style: const TextStyle(
-                                        fontSize: 14.0,
-                                        fontWeight: semiBold,
-                                        color: whiteColor,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 4.0,
-                                    ),
-                                    Container(
-                                      padding: const EdgeInsets.all(4.0),
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: isSelected
-                                            ? yellowColor
-                                            : (isToday
-                                                ? redColor
-                                                : Colors.transparent),
-                                      ),
-                                      child: Text(
-                                        dateFormat.format(date),
-                                        style: const TextStyle(
-                                          fontSize: 14.0,
-                                          fontWeight: semiBold,
-                                          color: whiteColor,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                        return GestureDetector(
+                          onTap: () {
+                            controller.handleDateSelected(date);
+                          },
+                          child: Container(
+                            margin: const EdgeInsets.only(
+                              right: 28,
+                            ),
+                            alignment: Alignment.center,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  DateFormat('EEE').format(date),
+                                  style: const TextStyle(
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: whiteColor,
+                                  ),
                                 ),
-                              ),
-                            );
-                          }).toList(),
-                        ),
-                      ),
+                                const SizedBox(
+                                  height: 4.0,
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.all(4.0),
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: isSelected
+                                        ? Colors.yellow
+                                        : Colors.transparent,
+                                  ),
+                                  child: Text(
+                                    dateFormat.format(date),
+                                    style: const TextStyle(
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.bold,
+                                      color: whiteColor,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
                     ),
                   ),
                   const SizedBox(
                     height: 24.0,
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 16.0,
+            ),
+            const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Column(
+                children: [
+                  IncomeCard(
+                    title: "Harian, 12 April 2023",
+                    description: '20X Pengantaran',
+                    price: 350000,
+                  ),
+                  SizedBox(
+                    height: 16.0,
+                  ),
+                  IncomeCard(
+                    title: "Mingguan, 12 - 18 April 2023",
+                    description: '40X Pengantaran',
+                    price: 850000,
+                  ),
+                  SizedBox(
+                    height: 16.0,
+                  ),
+                  IncomeCard(
+                    title: "Pendapatan Bulan April, 2023",
+                    description: '120X Pengantaran',
+                    price: 4500000,
+                  ),
+                  SizedBox(
+                    height: 16.0,
                   ),
                 ],
               ),

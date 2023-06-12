@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:mobile_kurir_sbw/core.dart';
+import 'package:mobile_kurir_sbw/shared/widget/card/modal_data_alamat.dart';
 
 class DetailUserModal extends StatelessWidget {
   const DetailUserModal({Key? key}) : super(key: key);
@@ -189,37 +190,10 @@ class DetailUserModal extends StatelessWidget {
             const SizedBox(
               height: 16.0,
             ),
-            Container(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              decoration: const BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(
-                    color: Color(0xffE7E7E7),
-                  ),
-                ),
-              ),
-              child: const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Alamat Costumer",
-                    style: TextStyle(
-                      fontSize: 14.0,
-                      fontWeight: bold,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 8.0,
-                  ),
-                  Text(
-                    "Jl. Taman Kutisari No.4, Kutisari, Kec. Tenggilis Mejoyo, Kota SBY, Jawa Timur 60291 ",
-                    style: TextStyle(
-                      fontSize: 14.0,
-                      fontWeight: light,
-                    ),
-                  ),
-                ],
-              ),
+            const ModalDataAlamat(
+              title: 'Alamat Costumer',
+              value:
+                  'Jl. Taman Kutisari No.4, Kutisari, Kec. Tenggilis Mejoyo, Kota SBY, Jawa Timur 60291',
             ),
             const SizedBox(
               height: 16.0,

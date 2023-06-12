@@ -11,9 +11,15 @@ class ProfilScreenView extends StatefulWidget {
       appBar: AppBar(
         title: Row(
           children: [
-            IconButton(
-              onPressed: () => Get.to(const BerandaScreenView()),
-              icon: const Icon(Icons.arrow_back_ios),
+            GestureDetector(
+              onTap: () => Get.back(),
+              child: const Icon(
+                Icons.arrow_back_ios,
+                size: 20,
+              ),
+            ),
+            const SizedBox(
+              width: 8.0,
             ),
             const Text("Profil"),
           ],

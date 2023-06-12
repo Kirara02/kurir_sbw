@@ -42,9 +42,7 @@ class IncomeScreenController extends State<IncomeScreenView>
 
   void handleDateSelected(DateTime selectedDate) {
     setState(() {
-      selectedDate = selectedDate;
+      this.selectedDate = selectedDate;
     });
-    print('Date selected: $selectedDate');
-    // Tambahkan logika atau aksi lain yang ingin Anda lakukan saat tanggal dipilih
   }
 }
